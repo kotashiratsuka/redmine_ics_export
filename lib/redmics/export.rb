@@ -88,9 +88,11 @@ module Redmics
         when :open
           issue_status_condition = ["#{IssueStatus.table_name}.is_closed = ?", false]
           version_status_condition = ["#{Version.table_name}.status <> ?", 'closed']
+          private_status_condition = ["#{Issue.table_name}.is_private=?", false]
         when :all
           issue_status_condition = []
           version_status_condition = []
+          private_status_condition = ["#{Issue.table_name}.is_private=?", false]
         else
           raise "Unknown status: '#{@status}'."
         end
@@ -99,6 +101,7 @@ module Redmics
         when :my
           raise 'Anonymous user cannot have issues assigned.' if @user.anonymous?
           assigned_to_condition = ["assigned_to_id = #{@user.id}"]
+          private_status_condition = []
         when :assigned
           assigned_to_condition = ["assigned_to_id is not null"]
         when :all
@@ -112,6 +115,7 @@ module Redmics
         c << project_condition
         c << issue_status_condition   unless issue_status_condition.empty?
         c << assigned_to_condition    unless assigned_to_condition.empty?
+        c << private_status_condition unless private_status_condition.empty?
         issues = []
         issues = Issue.find(
           :all, 
