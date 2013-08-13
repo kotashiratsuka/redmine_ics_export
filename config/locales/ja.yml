@@ -1,24 +1,24 @@
 # Japanese strings go here
 ja:
-  label_icalendar_header: ICalendar
-  label_issues_mine: My issues
-  label_issues_assigned: Assigned issues
-  label_issues_all: All issues
-  label_issues_open_only: open only
-  toolip_icalendar_link: Copy the link location for use in your favorite ical-application.
-  label_settings_rendering_header: Render options
-  label_settings_rendering_issues: Issue rendering as
-  label_settings_rendering_versions: Version rendering as
-  option_settings_rendering_none: skip rendering
-  option_settings_rendering_vevent_full_span: full time event
-  option_settings_rendering_vevent_end_date: all-day event for just the end date
-  option_settings_rendering_vevent_start_and_end_date: all-day event for start and end date
-  option_settings_rendering_vtodo: todo item
+  label_icalendar_header: カレンダー(iCal)
+  label_issues_mine: 報告チケット
+  label_issues_assigned: 担当チケット
+  label_issues_all: 全てのチケット
+  label_issues_open_only: 未終了のみ
+  toolip_icalendar_link: リンクコピーでiCalなどで使用できます
+  label_settings_rendering_header: 表示オプション
+  label_settings_rendering_issues: 表示するチケット
+  label_settings_rendering_versions: 表示するバージョン
+  option_settings_rendering_none: イベント表示しない
+  option_settings_rendering_vevent_full_span: 開始日から期日をイベントで表示
+  option_settings_rendering_vevent_end_date: 期日をイベントで表示
+  option_settings_rendering_vevent_start_and_end_date: 開始日をイベントで表示
+  option_settings_rendering_vtodo: TODO項目として表示
   text_settings_rendering_more_information: For more information see
-  label_redmics_settings_userprefs: ICS export
-  notice_redmics_userprefs_updated: ICS export settings have been updated sucessfully
-  notice_redmics_userprefs_reset: ICS export settings have been reset
-  label_settings_enhance_summary: Enhance summary with
+  label_redmics_settings_userprefs: カレンダー設定
+  notice_redmics_userprefs_updated: 設定が更新されました
+  notice_redmics_userprefs_reset: 設定をリセットしました
+  label_settings_enhance_summary: サマリーに表示
   option_settings_enhance_summary_plain: keep as is
   option_settings_enhance_summary_status: status
   option_settings_enhance_summary_ticket_number_and_status: ticket number and status
